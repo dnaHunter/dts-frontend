@@ -1,0 +1,11 @@
+.home {
+  &__width {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__listBorder {
+    margin: 0 1rem;
+    border-bottom: solid 1px gray;
+  }
+}
