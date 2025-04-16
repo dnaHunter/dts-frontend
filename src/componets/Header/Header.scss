@@ -1,0 +1,25 @@
+@use "../../styles/variables" as *;
+
+.header {
+  &__top {
+    background-color: black;
+  }
+
+  &__widthBand {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  &__logo {
+    fill: white;
+  }
+
+  &__bar {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    height: 10px;
+    background-color: $barBlue;
+  }
+}

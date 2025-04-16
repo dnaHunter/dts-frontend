@@ -1,4 +1,4 @@
-import "DetailedTask.scss"
+import "./DetailedTask.scss"
 
 export default function DetailedTask(){
 return <></>
