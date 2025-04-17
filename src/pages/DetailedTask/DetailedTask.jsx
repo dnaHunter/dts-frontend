@@ -58,6 +58,7 @@ export default function DetailedTask() {
     <section className="dtask">
       <div className="dtask__width">
         <h2 className="dtask__title">{task.title}</h2>
+        <p className="dtask__descTitle">Description</p>
         <p className="dtask__desc">{task.description}</p>
         <form onSubmit={handleSubmit} className="dtask__statusForm">
           <label htmlFor="status" className="dtask__label">
