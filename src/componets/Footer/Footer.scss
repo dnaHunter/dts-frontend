@@ -1,0 +1,15 @@
+@use "../../styles/variables" as *;
+
+.footer {
+  background-color: lightgray;
+
+  &__bar {
+    height: 10px;
+    background-color: $barBlue;
+  }
+
+  &__text {
+    padding: 1rem 0;
+    margin: 0 1rem;
+  }
+}
