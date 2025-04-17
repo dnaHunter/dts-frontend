@@ -35,11 +35,13 @@ export default function Homepage() {
     <section className="home">
       <div className="home__width">
         <h2 className="home__title">All Caseworker Tasks</h2>
-        <p className="home__subtitle">Click on a case for more details or to update it.</p>
+        <p className="home__subtitle">
+          Click on a case for more details or to update it.
+        </p>
         <p className="home__button">Create new task</p>
         <section className="home__list">
           {tasks.map((task) => (
-            <SimpleTask task={task} />
+            <SimpleTask task={task} key={task.id} />
           ))}
           <div className="home__listBorder"></div>
         </section>

@@ -1,0 +1,41 @@
+@use "../../styles/variables" as *;
+
+.dtask {
+  margin: 1rem;
+
+  &__desc {
+    margin-bottom: 2rem;
+  }
+  &__statusForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__label {
+    margin-right: 1rem;
+  }
+
+  &__status {
+    flex-grow: 2;
+
+    &--error {
+      border: 1px solid $errorred;
+    }
+  }
+
+  &__button {
+    margin-left: 1rem;
+    background-color: $buttonGreen;
+    box-shadow: $shadowGreen;
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: 0;
+  }
+}
