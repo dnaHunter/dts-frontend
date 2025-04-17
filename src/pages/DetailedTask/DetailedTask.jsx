@@ -14,8 +14,6 @@ export default function DetailedTask() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    console.log("started");
-
     const status = event.target.status.value;
     console.log(status);
 
@@ -31,7 +29,6 @@ export default function DetailedTask() {
     };
 
     const res = await axios.patch(`${BACKEND_URL}/status/${id}`, post);
-    console.log("pached");
   }
 
   async function getTask() {
