@@ -2,6 +2,7 @@ import axios from "axios";
 import SimpleTask from "../../componets/SimpleTask/SimpleTask";
 import "./Homepage.scss";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Homepage() {
   const [tasks, setTasks] = useState(null);
@@ -38,7 +39,9 @@ export default function Homepage() {
         <p className="home__subtitle">
           Click on a case for more details or to update it.
         </p>
-        <p className="home__button">Create new task</p>
+        <Link to={"/tasks/new"}>
+          <p className="home__button">Create new task</p>
+        </Link>
         <section className="home__list">
           {tasks.map((task) => (
             <SimpleTask task={task} key={task.id} />

@@ -1,0 +1,34 @@
+@use "../../styles/variables" as *;
+
+.newTask{
+
+    &__width{
+        margin: 1rem;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__input,
+    &__area,
+    &__date{
+        margin-bottom: 1.5rem;
+    }
+
+    &__button {
+        background-color: $buttonGreen;
+        box-shadow: $shadowGreen;
+        color: white;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        padding: .5rem 1rem;
+        font-weight: 700;
+        font-size: 1.25rem;
+        cursor: pointer;
+        border: 0;
+      }
+}

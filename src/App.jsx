@@ -4,6 +4,7 @@ import Header from "./componets/Header/Header";
 import Footer from "./componets/Footer/Footer";
 import DetailedTask from "./pages/DetailedTask/DetailedTask";
 import "./App.scss";
+import NewTask from "./pages/NewTask/NewTask";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Navigate to="/tasks" />} />
             <Route path="/tasks" element={<Homepage />} />
             <Route path="/tasks/:id" element={<DetailedTask />} />
+            <Route path="/tasks/new" element={<NewTask />} />
           </Routes>
         </div>
         <Footer />
