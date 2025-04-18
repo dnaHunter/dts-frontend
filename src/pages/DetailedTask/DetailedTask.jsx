@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./DetailedTask.scss";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import dayjs from "dayjs";
 
@@ -8,8 +8,17 @@ export default function DetailedTask() {
   const [task, setTask] = useState(null);
   const [error, setError] = useState(false);
 
+  const navigate = useNavigate();
+
   const { id } = useParams();
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
+  async function deleteTask(event) {
+    const res = await axios.delete(`${BACKEND_URL}/${id}`);
+    if (res.status == 200) {
+      navigate("/");
+    }
+  }
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -58,8 +67,12 @@ export default function DetailedTask() {
     <section className="dtask">
       <div className="dtask__width">
         <h2 className="dtask__title">{task.title}</h2>
-        <p className="dtask__descTitle">Description</p>
-        <p className="dtask__desc">{task.description}</p>
+        {task.description && task.description != "0" && (
+          <>
+            <p className="dtask__descTitle">Description</p>
+            <p className="dtask__desc">{task.description}</p>
+          </>
+        )}
         <form onSubmit={handleSubmit} className="dtask__statusForm">
           <label htmlFor="status" className="dtask__label">
             Status
@@ -75,6 +88,9 @@ export default function DetailedTask() {
         </form>
         <p className="dtask__dueDate">
           Due Date: {dayjs(task.due_date).format("DD/MM/YYYY")}
+        </p>
+        <p onClick={deleteTask} className="dtask__delete">
+          Delete Task
         </p>
       </div>
     </section>
