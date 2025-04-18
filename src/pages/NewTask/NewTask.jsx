@@ -93,7 +93,7 @@ export default function NewTask() {
           </div>
           <div className="newTask__pair">
             <label htmlFor="date" className="newTask__label">
-              Task Due Date
+              Task Due Date (Hour between 0 - 23)
             </label>
 
             <input

@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: space-around;
   }
-  
+
   &__width {
     margin: 0 1rem;
 
@@ -20,12 +20,19 @@
     }
   }
 
+  &__top {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
   &__title {
     margin-bottom: 0.5rem;
   }
 
   &__subtitle {
-    border-bottom: 1px solid grey;
     padding-bottom: 1rem;
   }
 
@@ -55,7 +62,7 @@
     @include tablet {
       display: grid;
       gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       margin-bottom: 2rem;
     }
   }

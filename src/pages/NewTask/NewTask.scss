@@ -19,6 +19,7 @@
     }
   }
 
+
   &__title {
     border-bottom: 1px solid grey;
     padding-bottom: 0.5rem;
@@ -41,7 +42,8 @@
 
   &__label {
     @include tablet {
-      width: 128px;
+      width: 10rem;
+      margin-right: 1rem;
     }
   }
 

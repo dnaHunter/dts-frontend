@@ -87,7 +87,7 @@ export default function DetailedTask() {
           <button className="dtask__button">Update Status</button>
         </form>
         <p className="dtask__dueDate">
-          Due Date: {dayjs(task.due_date).format("DD/MM/YYYY")}
+          Due Date: {dayjs(task.due_date).format("DD/MM/YYYY HH:mm")}
         </p>
         <p onClick={deleteTask} className="dtask__delete">
           Delete Task
