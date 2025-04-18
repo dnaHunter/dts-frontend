@@ -1,9 +1,23 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .home {
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
   &__width {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 1rem;
+
+    @include tablet {
+      margin: 0 $tabletMargin;
+    }
+
+    @include desktop {
+      width: $desktopWidth;
+    }
   }
 
   &__title {
@@ -21,14 +35,35 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     font-weight: 700;
     font-size: 1.25rem;
     cursor: pointer;
+    margin-bottom: 2rem;
+
+    @include tablet {
+      width: max-content;
+    }
+  }
+
+  &__buttonText {
+    margin: 0.25rem 1rem;
+  }
+
+  &__list {
+    @include tablet {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
   }
 
   &__listBorder {
     margin: 1rem 1rem 2rem 1rem;
     border-bottom: solid 1px gray;
+
+    @include tablet {
+      display: none;
+    }
   }
 }

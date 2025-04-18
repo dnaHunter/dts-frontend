@@ -1,6 +1,18 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+
 .task {
   margin: 1rem 1rem;
   border-top: solid 1px gray;
+
+  @include tablet{
+    border: solid 1px rgb(173, 173, 173);
+    border-radius: 4px;
+    
+    padding: 1rem;
+    width: max-content;
+  }
 
   &__width {
     color: black;

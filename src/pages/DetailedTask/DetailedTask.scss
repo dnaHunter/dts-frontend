@@ -1,7 +1,24 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .dtask {
-  margin: 1rem;
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &__width {
+    margin: 0 1rem;
+
+    @include tablet {
+      margin: 0 $tabletMargin;
+    }
+
+    @include desktop {
+      width: $desktopWidth;
+    }
+  }
 
   &__descTitle {
     padding-bottom: 0.5rem;
@@ -20,6 +37,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+
+    @include tablet {
+      justify-content: flex-start;
+    }
   }
 
   &__label {
@@ -28,6 +49,10 @@
 
   &__status {
     flex-grow: 2;
+
+    @include tablet {
+      max-width: 25rem;
+    }
 
     &--error {
       border: 1px solid $errorred;
@@ -47,12 +72,12 @@
     cursor: pointer;
     border: 0;
   }
-  
-  &__dueDate{
+
+  &__dueDate {
     margin-top: 2rem;
   }
 
-  &__delete{
+  &__delete {
     background-color: darkred;
     box-shadow: $shadowGreen;
     color: white;
@@ -63,5 +88,10 @@
     font-weight: 700;
     cursor: pointer;
     margin-top: 2rem;
+
+    @include tablet {
+      max-width: max-content;
+      padding: 0.5rem 2.5rem;
+    }
   }
 }

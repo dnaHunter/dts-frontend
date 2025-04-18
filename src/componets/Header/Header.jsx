@@ -12,7 +12,9 @@ export default function Header() {
           </Link>
         </div>
       </div>
-      <div className="header__bar"></div>
+      <div className="header__barWidth">
+        <div className="header__bar"></div>
+      </div>
     </header>
   );
 }

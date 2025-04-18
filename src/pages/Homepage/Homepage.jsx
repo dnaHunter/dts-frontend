@@ -40,14 +40,16 @@ export default function Homepage() {
           Click on a case for more details or to update it.
         </p>
         <Link to={"/tasks/new"}>
-          <p className="home__button">Create new task</p>
+          <div className="home__button">
+            <p className="home__buttonText">Create new task</p>
+          </div>
         </Link>
         <section className="home__list">
           {tasks.map((task) => (
             <SimpleTask task={task} key={task.id} />
           ))}
-          <div className="home__listBorder"></div>
         </section>
+        <div className="home__listBorder"></div>
       </div>
     </section>
   );
