@@ -17,6 +17,7 @@ export default function Homepage() {
       setTasks(data);
     } catch (error) {
       console.error(error);
+  
     }
   }
 
