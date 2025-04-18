@@ -46,7 +46,7 @@ export default function Homepage() {
         </Link>
         <section className="home__list">
           {tasks.map((task) => (
-            <SimpleTask task={task} key={task.id} />
+            <SimpleTask task={task} key={task.id} /> 
           ))}
         </section>
         <div className="home__listBorder"></div>
