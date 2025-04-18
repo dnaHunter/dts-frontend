@@ -70,9 +70,10 @@ export default function NewTask() {
             />
           </div>
           <div className="newTask__pair">
-            <label htmlFor="desc" className="newTask__label newTask__label--slim">
+            <label htmlFor="desc" className="newTask__label ">
               Task Description (Optional)
             </label>
+
             <textarea
               name="desc"
               id="desc"

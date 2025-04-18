@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: space-around;
   }
-  
+
   &__width {
     margin: 1rem;
 
@@ -41,18 +41,12 @@
 
   &__label {
     @include tablet {
-      margin-right: 0.4rem;
-      width: 8rem;
-
-      &--slim {
-        width: 9rem;
-        margin-right: 1rem;
-      }
+      width: 128px;
     }
   }
 
   &__area {
-    width: 100%;
+    flex-grow: 2;
     height: 10rem;
   }
 

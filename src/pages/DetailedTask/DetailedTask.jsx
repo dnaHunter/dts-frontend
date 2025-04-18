@@ -67,9 +67,9 @@ export default function DetailedTask() {
     <section className="dtask">
       <div className="dtask__width">
         <h2 className="dtask__title">{task.title}</h2>
+        <p className="dtask__descTitle">Description</p>
         {task.description && task.description != "0" && (
           <>
-            <p className="dtask__descTitle">Description</p>
             <p className="dtask__desc">{task.description}</p>
           </>
         )}
