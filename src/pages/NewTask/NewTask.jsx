@@ -97,7 +97,7 @@ export default function NewTask() {
             </label>
 
             <input
-              type="date"
+              type="datetime-local"
               name="date"
               id="date"
               className="newTask__date"
