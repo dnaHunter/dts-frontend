@@ -33,7 +33,7 @@ export default function NewTask() {
       event.target.date.classList.add("newTask__input--error");
       valid = false;
     } else {
-      event.target.title.classList.remove("newTask__input--error");
+      event.target.date.classList.remove("newTask__input--error");
     }
 
     if (!valid) {
@@ -93,7 +93,7 @@ export default function NewTask() {
           </div>
           <div className="newTask__pair">
             <label htmlFor="date" className="newTask__label">
-              Task Due Date (Hour between 0 - 23)
+              Task Due Date and time (24 Hour Time)
             </label>
 
             <input

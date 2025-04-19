@@ -1,6 +1,6 @@
 # DTS-Frontend
 
-This is the frontend repository for the 
+This is the frontend repository for my DTS interview test by Daniel Aston. This is paired with the backend repository which can be found [here](https://github.com/dnaHunter/dts-api).
 
 ## Installation
 
@@ -25,7 +25,6 @@ This is the frontend repository for the
   - react-router
   - sass
   - axios
-  
 - Server libraries:
   - knex
   - express
